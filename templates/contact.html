@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<img src="/static/4.jpg" >
+<h1 class="text-center"> Contact Us </h1>
+<div class="container">
+    <form method ="post" action ="/contact">
+    {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Enter your name</label>
+            <input type="text" class="form-control" id="name" name = "name" >
+            
+        </div>
+       
+        <div class="mb-3">
+            <label for="desc" class="form-label">Reason for contacting me</label>
+            <input type="text" class="form-control " id="desc" name="desc">
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Your phone no</label>
+            <input type="phone" class="form-control" id="phone" name ="phone">
+        </div>
+        
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+
+</div>
+
+
+
+{% endblock body %}
